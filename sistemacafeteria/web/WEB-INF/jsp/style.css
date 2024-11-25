@@ -2,28 +2,78 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    /* Tamaño para el encabezado principal */
+}
+
+h2 {
+    font-size: 42px;
+    /* Tamaño para el segundo nivel */
+}
+
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    /* Tamaño de la fuente */
+    line-height: 1.5;
+    /* Altura de línea (espaciado entre líneas) */
+    text-align: justify;
+    /* Alinear el texto justificado */
+    color: #333333;
+    /* Color del texto */
+    /* Espacio inferior entre párrafos */
 }
 
 body {
-    background-color: #97b3b0; /* Color de fondo más suave */
+    background-color: #F2F4F8;
+    /* Color de fondo más suave */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .login-container {
-    background-color: #ffffff; /* Blanco suave */
+    background-color: #ffffff;
+    /* Blanco suave */
     border-radius: 12px;
     width: 100%;
-    max-width: 400px;
-    padding: 2rem;
+    max-width: 600px;
+    align-content: center;
+    padding: 80px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.login-container h1 {
+    text-align: center;
+}
+
+.login-container p {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.parrafo-makanaki {
+    font-size: 12;
+    font-weight: 400;
+    color: #555555;
+    text-align: left;
+}
+
 .login-header {
-    background-color: #8C8D8F; /* Color gris suave*/
+    background-color: #8C8D8F;
+    /* Color gris suave*/
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
@@ -35,22 +85,24 @@ body {
 .login-form h2 {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: #333333; /* Texto en tono oscuro */
+    color: #333333;
+    /* Texto en tono oscuro */
 }
 
 .login-form label {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: #555555;
     margin-bottom: 0.5rem;
 }
 
 .login-form input {
     width: 100%;
-    padding: 0.8rem;
+    padding: 16px;
     margin: 0.5rem 0 1.5rem 0;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f7f8fa; /* Fondo de los inputs en color claro */
+    background-color: #f7f8fa;
+    /* Fondo de los inputs en color claro */
 }
 
 .login-form button {
@@ -59,13 +111,22 @@ body {
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
-    background-color: #6CA8A2; /* Botón en tono pastel */
+    background-color: #6CA8A2;
+    /* Botón en tono pastel */
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
+.login-form p {
+    color: #555555;
+    text-align: left;
+    font-size: 12;
+    font-weight: 400;
+}
+
 .login-form button:hover {
-    background-color: #5b9289; /* Color del botón al pasar el cursor */
+    background-color: #5b9289;
+    /* Color del botón al pasar el cursor */
 }
