@@ -2,6 +2,7 @@
     margin-left: 220px;
     padding: 20px;
     background-color: #97b3b0;
+    width: 100%;
     height: 100vh;
     overflow-y: auto;
 }
