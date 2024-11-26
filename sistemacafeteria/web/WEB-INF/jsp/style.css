@@ -14,7 +14,6 @@ h2 {
     /* Tamaño para el segundo nivel */
 }
 
-
 h3 {
     font-size: 24px;
 }
@@ -32,22 +31,19 @@ p {
 }
 
 body {
-    background-color: #F2F4F8;
+    background-color: #E0DCAA;
     /* Color de fondo más suave */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
-
-body {
     font-family: 'Roboto', sans-serif;
 }
 
 .login-container {
-    background-color: #ffffff;
+    background-color: #fff;
     /* Blanco suave */
-    border-radius: 12px;
+    border-radius: 20px;
     width: 100%;
     max-width: 600px;
     align-content: center;
@@ -56,19 +52,15 @@ body {
 }
 
 .login-container h1 {
-    text-align: center;
+    text-align: left;
+    font-size: 40px;
+    background-color:#fff;
+    color: #290102;
 }
 
 .login-container p {
     margin-bottom: 48px;
     text-align: center;
-}
-
-.parrafo-makanaki {
-    font-size: 12;
-    font-weight: 400;
-    color: #555555;
-    text-align: left;
 }
 
 .login-header {
