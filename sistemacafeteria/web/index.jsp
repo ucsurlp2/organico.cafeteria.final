@@ -1,118 +1,32 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio - Orgánico Cafetería</title>
-    <link rel="stylesheet" href="barra_lateral.css">
-    <link rel="stylesheet" href="panel_principal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Inicio de Sesión - Orgánico Cafetería</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Radley:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Barra lateral fija con el menú principal -->
-    <div class="barra-lateral">
-        <h2>ORGÁNICO CAFETERÍA</h2>
-        <!-- Opciones del menú -->
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="ventas.html" class="opcion-menu">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Venta</span>
-        </a>
-        <a href="inventario.html" class="opcion-menu">
-            <i class="fa fa-boxes"></i>
-            <span>Inventario</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-chart-bar"></i>
-            <span>Reportes</span>
-        </a>
-        <a href="config.html" class="opcion-menu">
-            <i class="fa fa-cogs"></i>
-            <span>Configuracion</span>
-        </a>
+    <div class="login-container">
+        <div class="logo-container">
+            <h1 class="logo">ORGANICO</h1>
+            <h2 class="sublogo">CAFETERIA</h2>
+        </div>
+        
+        
+        <!-- Agregamos el action para redirigir a dashboard.html -->
+        <form class="login-form" action="index.html" method="GET" target="_blank">
+            <p>Por favor, ingrese sus credenciales para acceder.</p>
+            <label for="username">Ingrese su nombre de usuario</label>
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <label for="password">Ingrese su contraseña</label>
+            <input type="password" id="password" placeholder="Contraseña" required>
 
-        <!-- Botones de acciones ubicados al final -->
-        <div class="acciones">
-            <form action="apertura-caja.html" method="get">
-                <button class="boton apertura-caja">Apertura y cierre de caja</button>
-            </form>
-            <button class="boton salir"><i class="fa fa-sign-out-alt"></i>Salir</button>
-        </div>
-    </div>
-    
-    <!-- Contenido principal -->
-    <div class="contenido-principal">
-        <h1>INICIO</h1>
-        <!-- Estadísticas resumidas -->
-        <div class="resumen">
-            <div class="tarjeta-resumen">
-                <i class="fa fa-user"></i>
-                <h3>Usuarios</h3>
-                <p>4</p>
-            </div>
-            <div class="tarjeta-resumen">
-                <i class="fa fa-tags"></i>
-                <h3>Categorías</h3>
-                <p>5</p>
-            </div>
-            <div class="tarjeta-resumen">
-                <i class="fa fa-box"></i>
-                <h3>Productos</h3>
-                <p>16</p>
-            </div>
-        </div>
-
-        <!-- Segunda fila de estadísticas -->
-        <div class="resumen">
-            <div class="tarjeta-resumen">
-                <i class="fa fa-shopping-cart"></i>
-                <h3>Ventas pendientes por cobrar</h3>
-                <p>S/. 00</p>
-            </div>
-            <div class="tarjeta-resumen">
-                <i class="fa fa-cash-register"></i>
-                <h3>Cobro de ventas</h3>
-                <p>S/. 00</p>
-            </div>
-        </div>
-
-        <!-- Tabla de productos más vendidos -->
-        <div class="contenedor-tabla">
-            <h2>PRODUCTOS MÁS VENDIDOS</h2>
-            <span class="top-diez">Top 10</span>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Categoría</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Cantidad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>07</td>
-                        <td>Café</td>
-                        <td>Espresso clásico</td>
-                        <td>Café espresso fuerte, preparado con granos 100% arábica.</td>
-                        <td>16</td>
-                    </tr>
-                    <tr>
-                        <td>25</td>
-                        <td>Bebidas frías</td>
-                        <td>Latte Frappé</td>
-                        <td>Café con leche, hielo, azúcar y crema batida, servido bien frío.</td>
-                        <td>16</td>
-                    </tr>
-                    <!-- Añadir más filas según sea necesario -->
-                </tbody>
-            </table>
-        </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
     </div>
 </body>
 </html>
