@@ -43,3 +43,8 @@
 26-Nov-2024 21:59:03.981 WARNING [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaVentasWeb] in deployment descriptor [C:\Users\fredy\OneDrive\Documentos\GitHub\organico.cafeteria\organico.cafeteria.final\organico.cafeteria.final\sistemacafeteria\Librerías\apache-tomcat-11.0.1\conf\Catalina\localhost\SistemaVentasWeb.xml] has been ignored
 26-Nov-2024 21:59:04.117 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\fredy\OneDrive\Documentos\GitHub\organico.cafeteria\organico.cafeteria.final\organico.cafeteria.final\sistemacafeteria\Librerías\apache-tomcat-11.0.1\conf\Catalina\localhost\SistemaVentasWeb.xml] has finished in [139] ms
 26-Nov-2024 21:59:04.127 INFO [http-nio-8080-exec-3] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaVentasWeb]] after start() had already been called. The second call will be ignored.
+26-Nov-2024 22:17:03.690 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+26-Nov-2024 22:17:03.693 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+26-Nov-2024 22:17:03.708 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+26-Nov-2024 22:17:03.787 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+26-Nov-2024 22:17:03.801 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
