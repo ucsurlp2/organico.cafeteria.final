@@ -157,7 +157,7 @@
         <!-- Tabla de productos m�s vendidos -->
         <div class="contenedor-tabla">
             <span class="top-diez">Top 10</span>
-            <h2>PRODUCTOS MAS VENDIDOS CHETUMARE MONKEY chipi</h2>
+            <h2>PRODUCTOS MAS VENDIDOS CHETUMARE MONKEY chipi pingonazo</h2>
             <%
                 Connection con;
                 String url = "jdbc:mysql://localhost:3306/cafeteria";
