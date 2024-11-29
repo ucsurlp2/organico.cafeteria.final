@@ -23,7 +23,7 @@
             <label for="username">Ingrese su nombre de usuario</label>
             <input type="text" id="username" placeholder="Nombre de usuario" name="User" required>
             
-            <label for="password">Ingrese su contraseï¿½a</label>
+            <label for="password">Ingrese su contraseña</label>
             <input type="password" id="password" placeholder="Contraseña" name="Pass" required>
 
             <button type="submit" name="accion" value="Ingresar" action="vistas/principal.jsp">Iniciar sesion</button>
