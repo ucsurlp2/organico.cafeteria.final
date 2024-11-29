@@ -24,14 +24,14 @@
         </div>
         <ul>
             <li>
-                <a href="VentasDia">
+                <a href="principal.jsp">
                     <i class="bx bx-grid-alt"></i>
                     <span class="nav-item">Inicio</span>
                 </a>
                 <span class="tooltip">Inicio</span>
             </li>
             <li>
-                <a href="vistas/ventas.jsp">
+                <a href="ventas.jsp">
                     <i class="bx bxs-store-alt"></i>
                     <span class="nav-item">Ventas</span>
                 </a>
