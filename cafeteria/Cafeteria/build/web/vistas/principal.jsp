@@ -24,7 +24,7 @@
         </div>
         <ul>
             <li>
-                <a href="principal.jsp">
+                <a href="VentasDia">
                     <i class="bx bx-grid-alt"></i>
                     <span class="nav-item">Inicio</span>
                 </a>
