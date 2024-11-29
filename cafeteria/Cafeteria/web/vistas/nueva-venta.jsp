@@ -64,7 +64,7 @@
                 <div>
                     <div class="categoria-display">
                         <h3>Categorias</h3>
-                        <div id="contenedor-btn" class="grupo-c">
+                        <div id="contenedor-btn" class="grupo-c" action="C">
                             <a href="productoControlador?btnselec=0" class="btn">Mostrar todo</a>
                             <a href="${pageContext.request.contextPath}/productoControlador?btnselec=1" class="btn">Bebidas Calientes</a>
                             <a href="productoControlador?btnselec=2" class="btn">Postres</a>
@@ -104,7 +104,7 @@
                                 <tbody>
                                   
                                     <tr class="align-middle">
-                                        <td><%=producto.getID()%></td>
+                                        <td><%=producto.getId()%></td>
                                         <td><%=producto.getNombre()%></td>
                                         <td><%=producto.getPrecio()%></td>
                                         <td><a>Añadir</a></td>
