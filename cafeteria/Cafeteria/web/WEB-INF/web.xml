@@ -8,6 +8,10 @@
         <servlet-name>Validar</servlet-name>
         <servlet-class>Controlador.Validar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VentasServlet</servlet-name>
+        <servlet-class>Controlador.Ventas.VentasServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -15,5 +19,9 @@
     <servlet-mapping>
         <servlet-name>Validar</servlet-name>
         <url-pattern>/Validar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VentasServlet</servlet-name>
+        <url-pattern>/VentasServlet</url-pattern>
     </servlet-mapping>
 </web-app>

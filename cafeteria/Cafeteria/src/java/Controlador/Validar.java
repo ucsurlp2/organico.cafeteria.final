@@ -1,7 +1,7 @@
 package Controlador;
 
 import Modelo.Usuario;
-import Modelo.UsuarioDAO;
+import ModeloDAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;

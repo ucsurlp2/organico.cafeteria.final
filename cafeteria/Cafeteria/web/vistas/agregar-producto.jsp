@@ -1,13 +1,11 @@
-<%@page import="java.util.List"%>
-<%@page import="Modelo.Ventas"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas - Orgánico Cafeteria</title>
+    <title>Nuevo producto - Orgánico Cafetería</title>
     <link rel="stylesheet" href="../css/barra_lateral.css">
-    <link rel="stylesheet" href="../css/ventas.css">
+    <link rel="stylesheet" href="../css/nuevo_producto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -71,66 +69,68 @@
             </button>
         </div>
     </div>
+    <!--CONTENIDO PRINCIPAL-->
     <div class="main-content">
         <div class="header">
-            <h1>Ventas</h1>
+            <h1>Agregar Nuevo Producto</h1>
         </div>
-        <div class="encabezado">
-            <h2>Lista de ventas</h2>
-            <button class="boton verde">Mostrar las ultimas 5 ventas</button>
+        <!--AQUI VA EL CODIGO DE LA PARTE DERECHA-->
+        <div class="grid">
+            <!-- Fila 1 -->
+            <div>
+                <label>Código de producto</label>
+                <input type="text" placeholder="35" readonly>
+            </div>
+            <div>
+                <label>Fecha de fabricación</label>
+                <input type="date">
+            </div>
+            <div>
+                <label>Fecha de vencimiento</label>
+                <input type="date">
+            </div>
+
+            <!-- Fila 2 -->
+            <div>
+                <label>Nombre de Producto</label>
+                <input type="text" placeholder="Nombre de producto">
+            </div>
+            <div>
+                <label>Nombre de la categoría</label>
+                <select>
+                    <option>Selecciona una categoría</option>
+                </select>
+            </div>
+
+            <!-- Fila 3 -->
+            <div>
+                <label>Stock disponible*</label>
+                <input type="number" placeholder="0" required>
+            </div>
+            <div>
+                <label>Precio unitario*</label>
+                <input type="number" placeholder="0" required>
+            </div>
+            <div>
+                <label>Valor de inventario</label>
+                <input type="text" placeholder="0" readonly>
+            </div>
+            <div>
+                <label>Nombre del proveedor</label>
+                <select>
+                    <option>PANADERÍAS UNIDAD S.A</option>
+                </select>
+            </div>
+
+            <!-- Descripción -->
+            <div class="descripcion full-width">
+                <label>Descripción</label>
+                <textarea placeholder="Descripción del producto"></textarea>
+            </div>
         </div>
-        <div class="lista-ventas">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Cliente</th>
-                        <th>Cajero</th>
-                        <th>Total Pagado</th>
-                        <th>Estado</th>
-                        <th>Comentarios</th>
-                        <th>Fecha de venta</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%
-                        List<Ventas> listaVentas = (List<Ventas>) request.getAttribute("listaVentas");
-                        if (listaVentas != null && !listaVentas.isEmpty()) {
-                            for (Ventas venta : listaVentas) {
-                    %>
-                    <tr>
-                        <td><%= venta.getId()%></td>
-                        <td><%= venta.getCliente()%></td>
-                        <td><%= venta.getEmpleado()%></td>
-                        <td><%= venta.getPrecio()%></td>
-                        <td>PAGADO</td> <!-- Si el estado es fijo, lo puedes ajustar dinámicamente -->
-                        <td><%= venta.getComentario()%></td>
-                        <td><%= venta.getFecha()%></td>
-                    </tr>
-                    <%
-                        }
-                    } else {
-                    %>
-                    <tr>
-                        <td colspan="7">No hay ventas registradas.</td>
-                    </tr>
-                    <%
-                        }
-                    %>
-                </tbody>
-            </table>
-        </div>
-        <!-- Opciones de acci?n -->
-        <div class="acciones-ventas">
-            <form action="editar-carta.jsp" method="get">
-                <button class="boton editar-carta">Editar Carta</button>
-            </form>
-            <form action="nueva-venta.jsp" method="get">
-                <button class="boton nueva-venta">Crear nueva venta</button>
-            </form>
-            <form action="ver-total-ventas.jsp" method="get">
-                <button class="boton total-ventas">Ver total de ventas</button>
-            </form>
+        <div class="actions">
+            <button class="add">Agregar producto</button>
+            <button class="clear">Limpiar</button>
         </div>
     </div>
 </body>

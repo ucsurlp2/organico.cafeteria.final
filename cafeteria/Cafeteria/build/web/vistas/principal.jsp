@@ -31,7 +31,7 @@
                 <span class="tooltip">Inicio</span>
             </li>
             <li>
-                <a href="ventas.jsp">
+                <a href="vistas/ventas.jsp">
                     <i class="bx bxs-store-alt"></i>
                     <span class="nav-item">Ventas</span>
                 </a>

@@ -1,54 +1,83 @@
+<%@page import="java.util.List"%>
+<%@page import="Modelo.Ventas"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas - Organico Cafeteria</title>
+    <title>Ventas - Orgánico Cafeteria</title>
     <link rel="stylesheet" href="../css/barra_lateral.css">
     <link rel="stylesheet" href="../css/ventas.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Barra lateral fija con el menÃº principal -->
     <div class="barra-lateral">
-        <h2>ORGÁNICO CAFETERÍA</h2>
-        <!-- Opciones del menú -->
-        <a href="index.html" class="opcion-menu">
-            <i class="fa fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="ventas.html" class="opcion-menu">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Venta</span>
-        </a>
-        <a href="#" class="opcion-menu activo">
-            <i class="fa fa-boxes"></i>
-            <span>Inventario</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-chart-bar"></i>
-            <span>Reportes</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-cogs"></i>
-            <span>Configuración</span>
-        </a>
-
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxs-coffee-alt"></i>
+                <span style="font-weight: 600;">Orgánico Cafetería</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="principal.jsp">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="nav-item">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="ventas.jsp">
+                    <i class="bx bxs-store-alt"></i>
+                    <span class="nav-item">Ventas</span>
+                </a>
+                <span class="tooltip">Ventas</span>
+            </li>
+            <li>
+                <a href="inventario.jsp">
+                    <i class="bx bx-basket"></i>
+                    <span class="nav-item">Inventario</span>
+                </a>
+                <span class="tooltip">Inventario</span>
+            </li>
+            <li>
+                <a href="reportes.jsp">
+                    <i class="bx bxs-report"></i>
+                    <span class="nav-item">Reportes</span>
+                </a>
+                <span class="tooltip">Reportes</span>
+            </li>
+            <li>
+                <a href="config.jsp">
+                    <i class="bx bx-cog"></i>
+                    <span class="nav-item">Configuración</span>
+                </a>
+                <span class="tooltip">Configuración</span>
+            </li>
+        </ul>
         <!-- Botones de acciones ubicados al final -->
         <div class="acciones">
-            <form action="apertura-caja.html" method="get">
-                <button class="boton apertura-caja">Apertura y cierre de caja</button>
+            <form action="apertura-caja.jsp" method="get">
+                <button class="boton apertura-caja">
+                    <i class="bx bx-wallet"></i>
+                    <span class="boton-texto">Apertura y cierre de caja</span>
+                </button>
             </form>
-            <button class="boton salir"><i class="fa fa-sign-out-alt"></i>Salir</button>
+            <button class="boton salir">
+                <i class="bx bx-log-out"></i>
+                <span class="boton-texto">Salir</span>
+            </button>
         </div>
     </div>
-
-    <!-- Contenido principal -->
-    <div class="contenido-principal">
-        <h1>VENTA</h1>
+    <div class="main-content">
+        <div class="header">
+            <h1>Ventas</h1>
+        </div>
         <div class="encabezado">
             <h2>Lista de ventas</h2>
-            <button class="boton verde">Mostrar las últimas 5 ventas</button>
+            <button class="boton verde">Mostrar las ultimas 5 ventas</button>
         </div>
         <div class="lista-ventas">
             <table>
@@ -64,40 +93,53 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                        List<Ventas> listaVentas = (List<Ventas>) request.getAttribute("listaVentas");
+                        if (listaVentas != null && !listaVentas.isEmpty()) {
+                            for (Ventas venta : listaVentas) {
+                    %>
                     <tr>
-                        <td>34</td>
-                        <td>Raul</td>
-                        <td>Paolo Crisóstomo</td>
-                        <td>32.00</td>
-                        <td>PAGADO</td>
-                        <td>Sin comentarios</td>
-                        <td>15/11/2024</td>
+                        <td><%= venta.getId()%></td>
+                        <td><%= venta.getCliente()%></td>
+                        <td><%= venta.getEmpleado()%></td>
+                        <td><%= venta.getPrecio()%></td>
+                        <td>PAGADO</td> <!-- Si el estado es fijo, lo puedes ajustar dinámicamente -->
+                        <td><%= venta.getComentario()%></td>
+                        <td><%= venta.getFecha()%></td>
                     </tr>
+                    <%
+                        }
+                    } else {
+                    %>
                     <tr>
-                        <td>35</td>
-                        <td>Miguel</td>
-                        <td>Paolo Crisóstomo</td>
-                        <td>32.00</td>
-                        <td>PAGADO</td>
-                        <td>El capuccino con leche...</td>
-                        <td>15/11/2024</td>
+                        <td colspan="7">No hay ventas registradas.</td>
                     </tr>
-                    <!-- Agregar más filas según sea necesario -->
+                    <%
+                        }
+                    %>
                 </tbody>
             </table>
         </div>
-        <!-- Opciones de acción -->
-        <div class="acciones-inventario">
-            <form action="editar-carta.html" method="get">
+        <!-- Opciones de acci?n -->
+        <div class="acciones-ventas">
+            <form action="editar-carta.jsp" method="get">
                 <button class="boton editar-carta">Editar Carta</button>
             </form>
-            <form action="nueva-venta.html" method="get">
-                <button class="boton agregar-producto">Crear nueva venta</button>
+            <form action="nueva-venta.jsp" method="get">
+                <button class="boton nueva-venta">Crear nueva venta</button>
             </form>
-            <form action="total-ventas.html" method="get">
-                <button class="boton registrar-compra">Ver total de ventas</button>
+            <form action="ver-total-ventas.jsp" method="get">
+                <button class="boton total-ventas">Ver total de ventas</button>
             </form>
         </div>
     </div>
 </body>
+<script>
+    let btn=document.querySelector('#btn');
+    let sidebar=document.querySelector('.barra-lateral');
+
+    btn.onclick=function(){
+        sidebar.classList.toggle('active');
+    };
+</script>
 </html>

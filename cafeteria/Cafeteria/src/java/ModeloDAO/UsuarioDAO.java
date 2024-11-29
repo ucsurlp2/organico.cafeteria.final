@@ -1,7 +1,8 @@
 
-package Modelo;
+package ModeloDAO;
 
 import Config.Conexion;
+import Modelo.Usuario;
 import java.sql.*;
 public class UsuarioDAO {
     Conexion cn = new Conexion();

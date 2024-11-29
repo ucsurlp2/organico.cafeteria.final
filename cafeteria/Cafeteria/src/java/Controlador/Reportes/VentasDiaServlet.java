@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controlador.Reportes;
+
 import Config.Conexion;
 import java.io.IOException;
 import java.sql.Connection;
