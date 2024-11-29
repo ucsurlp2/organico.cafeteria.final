@@ -4,7 +4,8 @@ import Config.Conexion;
 import Modelo.Producto;
 import java.sql.*;
 import java.util.*;
-import Interfaces.productoCRUD;
+import Interfaces.*;
+
 
 public class ProductoDAO implements productoCRUD {
 
@@ -22,7 +23,7 @@ public class ProductoDAO implements productoCRUD {
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while(rs.next()){
-                p.setID(rs.getInt("cod_catepro"));
+                p.setId(rs.getInt("cod_catepro"));
                 p.setNombre(rs.getString("nombre"));
                 p.setPrecio(rs.getDouble("precio"));
             }
@@ -42,7 +43,7 @@ public class ProductoDAO implements productoCRUD {
             rs=ps.executeQuery();
             while(rs.next()){
                 Producto pro= new Producto();
-                pro.setID(rs.getInt("cod_catepro"));
+                pro.setId(rs.getInt("cod_catepro"));
                 pro.setNombre(rs.getString("nombre"));
                 pro.setPrecio(rs.getDouble("precio"));
                 list.add(pro);
