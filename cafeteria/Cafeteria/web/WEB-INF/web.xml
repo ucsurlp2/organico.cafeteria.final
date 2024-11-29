@@ -12,6 +12,10 @@
         <servlet-name>VentasServlet</servlet-name>
         <servlet-class>Controlador.Ventas.VentasServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>productoControlador</servlet-name>
+        <servlet-class>Controlador.productoControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -23,5 +27,9 @@
     <servlet-mapping>
         <servlet-name>VentasServlet</servlet-name>
         <url-pattern>/VentasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productoControlador</servlet-name>
+        <url-pattern>/productoControlador</url-pattern>
     </servlet-mapping>
 </web-app>
