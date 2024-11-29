@@ -3,147 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuraci贸n</title>
-    <link rel="stylesheet" href="config.css">
-    <link rel="stylesheet" href="barra_lateral.css">
-    <link rel="stylesheet" href="panel_principal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    <title>Configuraci髇 - Org醤ico Cafeteria</title>
+    <link rel="stylesheet" href="../css/barra_lateral.css">
+    <link rel="stylesheet" href="../css/config.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head> 
 <body>
-    <!-- Barra lateral fija con el men煤 principal -->
     <div class="barra-lateral">
-        <h2>ORG脕NICO CAFETER脥A</h2>
-        <!-- Opciones del men煤 -->
-        <a href="index.html" class="opcion-menu">
-            <i class="fa fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="ventas.html" class="opcion-menu">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Venta</span>
-        </a>
-        <a href="inventario.html" class="opcion-menu">
-            <i class="fa fa-boxes"></i>
-            <span>Inventario</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-chart-bar"></i>
-            <span>Reportes</span>
-        </a>
-        <a href="config.html" class="opcion-menu">
-            <i class="fa fa-cogs"></i>
-            <span>Configuraci贸n</span>
-        </a>
-
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxs-coffee-alt"></i>
+                <span style="font-weight: 600;">Org醤ico Cafeter韆</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="principal.jsp">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="nav-item">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="ventas.jsp">
+                    <i class="bx bxs-store-alt"></i>
+                    <span class="nav-item">Ventas</span>
+                </a>
+                <span class="tooltip">Ventas</span>
+            </li>
+            <li>
+                <a href="inventario.jsp">
+                    <i class="bx bx-basket"></i>
+                    <span class="nav-item">Inventario</span>
+                </a>
+                <span class="tooltip">Inventario</span>
+            </li>
+            <li>
+                <a href="reportes.jsp">
+                    <i class="bx bxs-report"></i>
+                    <span class="nav-item">Reportes</span>
+                </a>
+                <span class="tooltip">Reportes</span>
+            </li>
+            <li>
+                <a href="config.jsp">
+                    <i class="bx bx-cog"></i>
+                    <span class="nav-item">Configuraci髇</span>
+                </a>
+                <span class="tooltip">Configuraci髇</span>
+            </li>
+        </ul>
         <!-- Botones de acciones ubicados al final -->
         <div class="acciones">
-            <form action="apertura-caja.html" method="get">
-                <button class="boton apertura-caja">Apertura y cierre de caja</button>
+            <form action="apertura-caja.jsp" method="get">
+                <button class="boton apertura-caja">
+                    <i class="bx bx-wallet"></i>
+                    <span class="boton-texto">Apertura y cierre de caja</span>
+                </button>
             </form>
-            <button class="boton salir"><i class="fa fa-sign-out-alt"></i>Salir</button>
+            <button class="boton salir">
+                <i class="bx bx-log-out"></i>
+                <span class="boton-texto">Salir</span>
+            </button>
         </div>
     </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Configuraci髇</h1>
+        </div>
+        <section class="mi-usuario">
+            <h2>Mi Usuario</h2>
+            <form>
+                <label>Nombres completos</label>
+                <input type="text" value="Roberto Paolo" readonly>
+                
+                <label>Apellidos</label>
+                <input type="text" value="Cris髎tomo Berrocal" readonly>
 
-    <div class="contenido-principal">
-            <h1>Configuraci贸n</h1>
+                <label>N鷐ero de documento de identidad</label>
+                <input type="text" value="71776762" readonly>
 
-            <section class="mi-usuario">
-                <h2>Mi Usuario</h2>
-                <form>
-                    <label>Nombres completos</label>
-                    <input type="text" value="Roberto Paolo">
-                    
-                    <label>Apellidos</label>
-                    <input type="text" value="Cris贸stomo Berrocal">
+                <label>C骴igo de empleado</label>
+                <input type="text" value="01" readonly>
 
-                    <label>N煤mero de documento de identidad</label>
-                    <input type="text" value="71776762">
-
-                    <label>C贸digo de empleado</label>
-                    <input type="text" value="01">
-
-                    <label>Tel茅fono</label>
-                    <input type="text" value="934 401 034">
-
-                    <label>Editar permisos</label>
-                    <select>
-                        <option>Administrador</option>
-                        <option>Cajero</option>
-                        <option>Barista</option>
-                    </select>
-                </form>
-            </section>
-            <section class="usuarios">
-                <h2>Usuarios</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Rol</th>
-                            <th>脷ltimo acceso</th>
-                            <th>Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Fredy Nolasco</td>
-                            <td>Administrador</td>
-                            <td>15/11/2024 | 21:53</td>
-                            <td><button>Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Paolo Cris贸stomo</td>
-                            <td>Cajero</td>
-                            <td>15/11/2024 | 10:00</td>
-                            <td><button>Editar</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Mar铆a Casasani</td>
-                            <td>Barista</td>
-                            <td>12/11/2024 | 12:00</td>
-                            <td><button>Editar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="aperturas-cierres">
-                <h2>Aperturas y cierres de caja</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Usuario Apertura</th>
-                            <th>Monto Apertura</th>
-                            <th>Monto Cierre</th>
-                            <th>Comentarios</th>
-                            <th>Usuario Cierre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>4</td>
-                            <td>Fredy Nolasco</td>
-                            <td>200.00</td>
-                            <td>493.50</td>
-                            <td></td>
-                            <td>Paolo Cris贸stomo</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Fredy Nolasco</td>
-                            <td>200.00</td>
-                            <td>493.50</td>
-                            <td></td>
-                            <td>Paolo Cris贸stomo</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-    </div>
+                <label>Tel閒ono</label>
+                <input type="text" value="934 401 034" readonly>
+            </form>
+        </section>
+        <section class="usuarios">
+            <h2>Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Rol</th>
+                        <th>趌timo acceso</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fredy Nolasco</td>
+                        <td>Administrador</td>
+                        <td>15/11/2024 | 21:53</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Paolo Cris髎tomo</td>
+                        <td>Cajero</td>
+                        <td>15/11/2024 | 10:00</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mar韆 Casasani</td>
+                        <td>Barista</td>
+                        <td>12/11/2024 | 12:00</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="aperturas-cierres">
+            <h2>Aperturas y cierres de caja</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario Apertura</th>
+                        <th>Monto Apertura</th>
+                        <th>Monto Cierre</th>
+                        <th>Comentarios</th>
+                        <th>Usuario Cierre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td>Fredy Nolasco</td>
+                        <td>200.00</td>
+                        <td>493.50</td>
+                        <td></td>
+                        <td>Paolo Cris髎tomo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fredy Nolasco</td>
+                        <td>200.00</td>
+                        <td>493.50</td>
+                        <td></td>
+                        <td>Paolo Cris髎tomo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 </body>
+<script>
+    let btn=document.querySelector('#btn');
+    let sidebar=document.querySelector('.barra-lateral');
+
+    btn.onclick=function(){
+        sidebar.classList.toggle('active');
+    };
+</script>
 </html>
