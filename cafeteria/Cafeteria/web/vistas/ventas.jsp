@@ -82,7 +82,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Cod_Pedido</th>
+                        <th>ID</th>
                         <th>Cliente</th>
                         <th>Empleado</th>
                         <th>Comentario</th>
