@@ -18,7 +18,7 @@
         <div class="top">
             <div class="logo">
                 <i class="bx bxs-coffee-alt"></i>
-                <span style="font-weight: 600;">Orgánico Cafetería</span>
+                <span style="font-weight: 600;">Orgï¿½nico Cafeterï¿½a</span>
             </div>
             <i class="bx bx-menu" id="btn"></i>
         </div>
@@ -54,9 +54,9 @@
             <li>
                 <a href="config.html">
                     <i class="bx bx-cog"></i>
-                    <span class="nav-item">Configuración</span>
+                    <span class="nav-item">Configuraciï¿½n</span>
                 </a>
-                <span class="tooltip">Configuración</span>
+                <span class="tooltip">Configuraciï¿½n</span>
             </li>
         </ul>
         <!-- Botones de acciones ubicados al final -->
@@ -79,7 +79,7 @@
         <div class="header">
             <h1>Inicio</h1>
         </div>
-        <!-- Estadísticas resumidas -->
+        <!-- Estadï¿½sticas resumidas -->
         <div class="resumen">
             <div class="tarjeta-resumen">
                 <i class="fa fa-user"></i>
@@ -98,7 +98,7 @@
             </div>
             <div class="tarjeta-resumen">
                 <i class="fa fa-tags"></i>
-                <h3>Categorías</h3>               
+                <h3>Categorï¿½as</h3>               
                 <%
                     Double numCategorias = (Double) request.getAttribute("numCategorias");
                     String error2 = (String) request.getAttribute("error");
@@ -124,11 +124,11 @@
             </div>
         </div>
         
-        <!-- Segunda fila de estadísticas -->
+        <!-- Segunda fila de estadï¿½sticas -->
         <div class="resumen">
             <div class="tarjeta-resumen">
                 <i class="fa fa-shopping-cart"></i>
-                <h3># de Ventas del día</h3>
+                <h3># de Ventas del dï¿½a</h3>
                 <%
                     Double numVentasTotal = (Double) request.getAttribute("numVentasTotal");
                     String error4 = (String) request.getAttribute("error");
@@ -154,7 +154,7 @@
 
             </div>
         </div>
-        <!-- Tabla de productos más vendidos -->
+        <!-- Tabla de productos mï¿½s vendidos -->
         <div class="contenedor-tabla">
             <span class="top-diez">Top 10</span>
             <h2>PRODUCTOS MAS VENDIDOS CHETUMARE MONKEY chipi</h2>
