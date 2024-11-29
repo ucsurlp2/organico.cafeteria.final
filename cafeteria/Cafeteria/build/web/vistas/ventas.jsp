@@ -1,5 +1,4 @@
-<%@page import="java.util.List"%>
-<%@page import="Modelo.Ventas"%>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -85,38 +84,21 @@
                     <tr>
                         <th>ID</th>
                         <th>Cliente</th>
-                        <th>Cajero</th>
-                        <th>Total Pagado</th>
-                        <th>Estado</th>
-                        <th>Comentarios</th>
-                        <th>Fecha de venta</th>
+                        <th>Empleado</th>
+                        <th>Comentario</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <%
-                        List<Ventas> listaVentas = (List<Ventas>) request.getAttribute("listaVentas");
-                        if (listaVentas != null && !listaVentas.isEmpty()) {
-                            for (Ventas venta : listaVentas) {
-                    %>
                     <tr>
-                        <td><%= venta.getId()%></td>
-                        <td><%= venta.getCliente()%></td>
-                        <td><%= venta.getEmpleado()%></td>
-                        <td><%= venta.getPrecio()%></td>
-                        <td>PAGADO</td> <!-- Si el estado es fijo, lo puedes ajustar dinámicamente -->
-                        <td><%= venta.getComentario()%></td>
-                        <td><%= venta.getFecha()%></td>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                        <td>e</td>
+                        <td>f</td>
                     </tr>
-                    <%
-                        }
-                    } else {
-                    %>
-                    <tr>
-                        <td colspan="7">No hay ventas registradas.</td>
-                    </tr>
-                    <%
-                        }
-                    %>
                 </tbody>
             </table>
         </div>
