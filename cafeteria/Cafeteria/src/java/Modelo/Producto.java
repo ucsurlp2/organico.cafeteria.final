@@ -2,25 +2,25 @@ package Modelo;
 
 
 public class Producto {
-    int ID;
+    int id;
     String nombre;
     double precio;
 
     public Producto() {
     }
 
-    public Producto(int ID, String nomproduc, double precio) {
-        this.ID = ID;
+    public Producto(int id, String nomproduc, double precio) {
+        this.id = id;
         this.nombre = nomproduc;
         this.precio = precio;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int Id) {
+        this.id = id;
     }
 
     public String getNombre() {
