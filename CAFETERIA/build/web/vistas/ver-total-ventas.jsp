@@ -12,35 +12,65 @@
 <body>
     <!-- Barra lateral fija con el menú principal -->
     <div class="barra-lateral">
-        <h2>ORGÁNICO CAFETERÍA</h2>
-        <!-- Opciones del menú -->
-        <a href="index.html" class="opcion-menu">
-            <i class="fa fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="ventas.html" class="opcion-menu">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Venta</span>
-        </a>
-        <a href="#" class="opcion-menu activo">
-            <i class="fa fa-boxes"></i>
-            <span>Inventario</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-chart-bar"></i>
-            <span>Reportes</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-cogs"></i>
-            <span>Configuración</span>
-        </a>
-
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxs-coffee-alt"></i>
+                <span style="font-weight: 600;">Organico Cafeteria</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="Controlador?accion=listarpr">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="nav-item">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listar">
+                    <i class="bx bxs-store-alt"></i>
+                    <span class="nav-item">Ventas</span>
+                </a>
+                <span class="tooltip">Ventas</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listarinv">
+                    <i class="bx bx-basket"></i>
+                    <span class="nav-item">Inventario</span>
+                </a>
+                <span class="tooltip">Inventario</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listarrep">
+                    <i class="bx bxs-report"></i>
+                    <span class="nav-item">Reportes</span>
+                </a>
+                <span class="tooltip">Reportes</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listarusuario">
+                    <i class="bx bx-cog"></i>
+                    <span class="nav-item">Configuracion</span>
+                </a>
+                <span class="tooltip">Configuracion</span>
+            </li>
+        </ul>
         <!-- Botones de acciones ubicados al final -->
         <div class="acciones">
-            <form action="apertura-caja.html" method="get">
-                <button class="boton apertura-caja">Apertura y cierre de caja</button>
+            <form action="apertura-caja.jsp" method="get">
+                <button class="boton apertura-caja">
+                    <i class="bx bx-wallet"></i>
+                    <span class="boton-texto">Apertura y cierre de caja</span>
+                </button>
             </form>
-            <button class="boton salir"><i class="fa fa-sign-out-alt"></i>Salir</button>
+            <form action="Validar" method="POST">
+                <button type="submit" class="boton salir" name="accion" value="Salir">
+                    <i class="bx bx-log-out"></i>
+                    <span class="boton-texto">Salir</span>
+                </button>
+            </form>
+            
         </div>
     </div>
 

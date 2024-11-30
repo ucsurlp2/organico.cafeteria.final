@@ -26,7 +26,7 @@
             <label for="password">Ingrese su contraseña</label>
             <input type="password" id="password" placeholder="Contraseña" name="Pass" required>
 
-            <button type="submit" name="accion" value="Ingresar" action="vistas/principal.jsp">Iniciar sesion</button>
+            <button type="submit" name="accion" value="Ingresar"">Iniciar sesion</button>
         </form>
     </div>
 </body>

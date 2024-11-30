@@ -72,61 +72,55 @@
                         <span class="boton-texto">Salir</span>
                     </button>
                 </form>
-
+                    
             </div>
         </div>
         <!--CONTENIDO PRINCIPAL-->
         <div class="main-content">
             <div class="header">
-                <h1>Editar Carta</h1>
+                <h1>Inventario / Agregar nuevo produto</h1>
+                <form action="Controlador">
+                    
+                    Código del producto (Debe mostrar el cod del producto que se podría autogenerar):<br><!-- comment -->
+                    <input type="text" name="txtCodProd"><br>
+                    Fecha de fabricación: <br>
+                    <input type="text" name="txtFechFab"><br>
+                    Fecha de vencimiento <br>
+                    <input type="text" name="txtFechaVenc"><br>
+                    Nombre del producto <br>
+                    <input type="text" name="txtNombre"><br>
+                    Categoría <br>
+                        <select>
+                            <option>Sin categoria</option>
+                            <option>Categoria1</option>
+                            <option>Categoria1</option>
+                        </select> <br>                    
+                    Tipo de producto <br>
+                        <select>
+                            <option>Sin tipo</option>
+                            <option>Materia prima</option>
+                            <option>Producto preparado</option>
+                        </select> <br>              
+                    Stock disponible<br>
+                    <input type="text" name="txtStockDisp"><br>
+                    Precio unitario<br>
+                    <input type="text" name="txtStockDisp"><br>
+                    Valor de inventario de producto<br>
+                    <input type="text" name="txtStockDisp"><br>
+                    Nombre del proveedor <br>
+                        <select>
+                            <option>Sin proveedor</option>
+                            <option>Proveedor1</option>
+                            <option>Proveedor2</option>
+                        </select> <br>
+                    <!-- Botón -->
+                    <input type="submit" name ="accion" value="agregar"
+                </form>
             </div>
-            <h2>Lista de productos</h2>
-            <!-- Lista de productos -->
-            <div class="lista-productos">
-                <div class="barra-busqueda">
-                    <div class="campo-lupa">
-                        <i class="fa fa-search"></i>
-                        <input type="text" placeholder="Buscar productos...">
-                    </div>
-                    <button>Agrupar por: Sin filtro aplicado</button>
-                </div>
+            <h2>Debajo de esto mostrar el producto para editar</h2>
+            
+            
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Categor?a</th>
-                            <th>Nombre</th>
-                            <th>Descripci?n</th>
-                            <th>Stock disp</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%
-                            ProductoDAO proddao = new ProductoDAO();
-                            List<Producto> listprod = proddao.listarprod();
-                            for (Producto prod : listprod) {
-                        %>
-                        <tr>
-                            <td><%= prod.getCod_prod()%></td>
-                            <td><%= prod.getNom_cat()%></td>
-                            <td><%= prod.getNombre()%></td>
-                            <td><%= prod.getDescripcion()%></td>
-                            <td><%= prod.getStock()%></td>
-                            <td><%= prod.getPrecio()%></td>
-                            <td>
-                                <a href="#" class="editar">Editar</a> | <a href="#" class="eliminar">Eliminar</a>
-                            </td>
-                        </tr>
-                        <%}%>
-                        <!-- Repite m?s filas seg?n sea necesario -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Opciones de acci?n -->
         </div>
     </body>
     <script>

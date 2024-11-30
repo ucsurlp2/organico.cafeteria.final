@@ -1,0 +1,336 @@
+30-Nov-2024 11:51:03.877 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Nov-2024 11:51:03.878 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Nov-2024 11:51:03.880 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@754777cd')
+30-Nov-2024 11:54:02.918 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Nov-2024 11:54:02.919 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Nov-2024 11:54:42.170 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Nov-2024 11:54:42.170 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Nov-2024 11:54:42.172 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@de18f63')
+30-Nov-2024 11:55:08.546 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Nov-2024 11:55:08.546 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Nov-2024 11:55:13.873 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Nov-2024 11:55:13.873 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Nov-2024 11:55:13.875 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@680a66dd')
+30-Nov-2024 11:56:24.397 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Nov-2024 11:56:24.397 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Nov-2024 11:56:53.753 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Nov-2024 11:56:53.754 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Nov-2024 11:56:53.758 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@108bdbd8')
+30-Nov-2024 12:37:47.799 SEVERE [http-nio-8080-exec-122] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\paolo\OneDrive\Documents\Github\organico.cafeteria.final\Recursos\apache-tomcat-10.1.33\work\Catalina\localhost\Cafeteria\org\apache\jsp\vistas\reportes_jsp.java]
+Only a type can be imported. Modelo.Pedidos resolves to a package
+
+Ha tenido lugar un error en la línea: [17] en el fichero java generado: [C:\Users\paolo\OneDrive\Documents\Github\organico.cafeteria.final\Recursos\apache-tomcat-10.1.33\work\Catalina\localhost\Cafeteria\org\apache\jsp\vistas\reportes_jsp.java]
+Only a type can be imported. ModeloDAO.PedidosDAO resolves to a package
+
+Ha tenido lugar un error en la línea: [236] en el archivo jsp: [/vistas/reportes.jsp]
+PedidosDAO cannot be resolved to a type
+233:                             </thead>
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+
+
+Ha tenido lugar un error en la línea: [236] en el archivo jsp: [/vistas/reportes.jsp]
+PedidosDAO cannot be resolved to a type
+233:                             </thead>
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+
+
+Ha tenido lugar un error en la línea: [237] en el archivo jsp: [/vistas/reportes.jsp]
+Pedidos cannot be resolved to a type
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+240:                                 <tr>
+
+
+Ha tenido lugar un error en la línea: [238] en el archivo jsp: [/vistas/reportes.jsp]
+Pedidos cannot be resolved to a type
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+240:                                 <tr>
+241:                                     <td><%=ped.getId_ped()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:81)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:543)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at Controlador.Controlador.doGet(Controlador.java:88)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+30-Nov-2024 12:37:47.799 SEVERE [http-nio-8080-exec-122] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [Controlador] en el contexto con ruta [/Cafeteria] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\paolo\OneDrive\Documents\Github\organico.cafeteria.final\Recursos\apache-tomcat-10.1.33\work\Catalina\localhost\Cafeteria\org\apache\jsp\vistas\reportes_jsp.java]
+Only a type can be imported. Modelo.Pedidos resolves to a package
+
+Ha tenido lugar un error en la línea: [17] en el fichero java generado: [C:\Users\paolo\OneDrive\Documents\Github\organico.cafeteria.final\Recursos\apache-tomcat-10.1.33\work\Catalina\localhost\Cafeteria\org\apache\jsp\vistas\reportes_jsp.java]
+Only a type can be imported. ModeloDAO.PedidosDAO resolves to a package
+
+Ha tenido lugar un error en la línea: [236] en el archivo jsp: [/vistas/reportes.jsp]
+PedidosDAO cannot be resolved to a type
+233:                             </thead>
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+
+
+Ha tenido lugar un error en la línea: [236] en el archivo jsp: [/vistas/reportes.jsp]
+PedidosDAO cannot be resolved to a type
+233:                             </thead>
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+
+
+Ha tenido lugar un error en la línea: [237] en el archivo jsp: [/vistas/reportes.jsp]
+Pedidos cannot be resolved to a type
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+240:                                 <tr>
+
+
+Ha tenido lugar un error en la línea: [238] en el archivo jsp: [/vistas/reportes.jsp]
+Pedidos cannot be resolved to a type
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+240:                                 <tr>
+241:                                     <td><%=ped.getId_ped()%></td>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\paolo\OneDrive\Documents\Github\organico.cafeteria.final\Recursos\apache-tomcat-10.1.33\work\Catalina\localhost\Cafeteria\org\apache\jsp\vistas\reportes_jsp.java]
+Only a type can be imported. Modelo.Pedidos resolves to a package
+
+Ha tenido lugar un error en la línea: [17] en el fichero java generado: [C:\Users\paolo\OneDrive\Documents\Github\organico.cafeteria.final\Recursos\apache-tomcat-10.1.33\work\Catalina\localhost\Cafeteria\org\apache\jsp\vistas\reportes_jsp.java]
+Only a type can be imported. ModeloDAO.PedidosDAO resolves to a package
+
+Ha tenido lugar un error en la línea: [236] en el archivo jsp: [/vistas/reportes.jsp]
+PedidosDAO cannot be resolved to a type
+233:                             </thead>
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+
+
+Ha tenido lugar un error en la línea: [236] en el archivo jsp: [/vistas/reportes.jsp]
+PedidosDAO cannot be resolved to a type
+233:                             </thead>
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+
+
+Ha tenido lugar un error en la línea: [237] en el archivo jsp: [/vistas/reportes.jsp]
+Pedidos cannot be resolved to a type
+234:                             <tbody>
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+240:                                 <tr>
+
+
+Ha tenido lugar un error en la línea: [238] en el archivo jsp: [/vistas/reportes.jsp]
+Pedidos cannot be resolved to a type
+235:                                 <% 
+236:                                     PedidosDAO dao = new PedidosDAO();
+237:                                     List<Pedidos> listpedio = dao.listped();
+238:                                     for (Pedidos ped : listpedio) {
+239:                                 %>
+240:                                 <tr>
+241:                                     <td><%=ped.getId_ped()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:81)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:543)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at Controlador.Controlador.doGet(Controlador.java:88)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+30-Nov-2024 12:48:42.903 INFO [http-nio-8080-exec-169] org.apache.catalina.core.ApplicationContext.log Marcando el servlet [Controlador] como no disponible
+30-Nov-2024 12:48:42.903 SEVERE [http-nio-8080-exec-169] org.apache.catalina.core.StandardWrapperValve.invoke Excepción de reserva de espacio para servlet [Controlador]
+	java.lang.RuntimeException: Uncompilable code - cannot find symbol
+  symbol:   class string
+  location: class Controlador.Controlador
+		at Controlador.Controlador.<clinit>(Controlador.java:1)
+		at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+		at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1161)
+		at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.ensureClassInitialized(MethodHandleAccessorFactory.java:340)
+		at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.newConstructorAccessor(MethodHandleAccessorFactory.java:103)
+		at java.base/jdk.internal.reflect.ReflectionFactory.newConstructorAccessor(ReflectionFactory.java:173)
+		at java.base/java.lang.reflect.Constructor.acquireConstructorAccessor(Constructor.java:548)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:498)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:144)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:758)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:575)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:115)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+30-Nov-2024 12:49:06.156 INFO [http-nio-8080-exec-178] org.apache.catalina.core.ApplicationContext.log Marcando el servlet [Controlador] como no disponible
+30-Nov-2024 12:49:06.156 SEVERE [http-nio-8080-exec-178] org.apache.catalina.core.StandardWrapperValve.invoke Excepción de reserva de espacio para servlet [Controlador]
+	java.lang.RuntimeException: Uncompilable code - cannot find symbol
+  symbol:   class string
+  location: class Controlador.Controlador
+		at Controlador.Controlador.<clinit>(Controlador.java:1)
+		at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+		at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1161)
+		at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.ensureClassInitialized(MethodHandleAccessorFactory.java:340)
+		at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.newConstructorAccessor(MethodHandleAccessorFactory.java:103)
+		at java.base/jdk.internal.reflect.ReflectionFactory.newConstructorAccessor(ReflectionFactory.java:173)
+		at java.base/java.lang.reflect.Constructor.acquireConstructorAccessor(Constructor.java:548)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:498)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:144)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:758)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:575)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:115)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)

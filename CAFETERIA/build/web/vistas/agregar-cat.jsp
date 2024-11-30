@@ -14,45 +14,45 @@
         <div class="top">
             <div class="logo">
                 <i class="bx bxs-coffee-alt"></i>
-                <span style="font-weight: 600;">Orgánico Cafetería</span>
+                <span style="font-weight: 600;">Organico Cafeteria</span>
             </div>
             <i class="bx bx-menu" id="btn"></i>
         </div>
         <ul>
             <li>
-                <a href="principal.jsp">
+                <a href="Controlador?accion=listarpr">
                     <i class="bx bx-grid-alt"></i>
                     <span class="nav-item">Inicio</span>
                 </a>
                 <span class="tooltip">Inicio</span>
             </li>
             <li>
-                <a href="ventas.jsp">
+                <a href="Controlador?accion=listar">
                     <i class="bx bxs-store-alt"></i>
                     <span class="nav-item">Ventas</span>
                 </a>
                 <span class="tooltip">Ventas</span>
             </li>
             <li>
-                <a href="inventario.jsp">
+                <a href="Controlador?accion=listarinv">
                     <i class="bx bx-basket"></i>
                     <span class="nav-item">Inventario</span>
                 </a>
                 <span class="tooltip">Inventario</span>
             </li>
             <li>
-                <a href="reportes.jsp">
+                <a href="Controlador?accion=listarrep">
                     <i class="bx bxs-report"></i>
                     <span class="nav-item">Reportes</span>
                 </a>
                 <span class="tooltip">Reportes</span>
             </li>
             <li>
-                <a href="config.jsp">
+                <a href="Controlador?accion=listarusuario">
                     <i class="bx bx-cog"></i>
-                    <span class="nav-item">Configuración</span>
+                    <span class="nav-item">Configuracion</span>
                 </a>
-                <span class="tooltip">Configuración</span>
+                <span class="tooltip">Configuracion</span>
             </li>
         </ul>
         <!-- Botones de acciones ubicados al final -->
@@ -63,10 +63,13 @@
                     <span class="boton-texto">Apertura y cierre de caja</span>
                 </button>
             </form>
-            <button class="boton salir">
-                <i class="bx bx-log-out"></i>
-                <span class="boton-texto">Salir</span>
-            </button>
+            <form action="Validar" method="POST">
+                <button type="submit" class="boton salir" name="accion" value="Salir">
+                    <i class="bx bx-log-out"></i>
+                    <span class="boton-texto">Salir</span>
+                </button>
+            </form>
+            
         </div>
     </div>
     <!--CONTENIDO PRINCIPAL-->

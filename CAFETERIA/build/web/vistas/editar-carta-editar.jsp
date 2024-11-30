@@ -78,55 +78,12 @@
         <!--CONTENIDO PRINCIPAL-->
         <div class="main-content">
             <div class="header">
-                <h1>Editar Carta</h1>
+                <h1>Editar Carta / Editar producto</h1>
             </div>
-            <h2>Lista de productos</h2>
-            <!-- Lista de productos -->
-            <div class="lista-productos">
-                <div class="barra-busqueda">
-                    <div class="campo-lupa">
-                        <i class="fa fa-search"></i>
-                        <input type="text" placeholder="Buscar productos...">
-                    </div>
-                    <button>Agrupar por: Sin filtro aplicado</button>
-                </div>
+            <h2>Debajo de esto mostrar el producto para editar</h2>
+            
+            
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Categor?a</th>
-                            <th>Nombre</th>
-                            <th>Descripci?n</th>
-                            <th>Stock disp</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%
-                            ProductoDAO proddao = new ProductoDAO();
-                            List<Producto> listprod = proddao.listarprod();
-                            for (Producto prod : listprod) {
-                        %>
-                        <tr>
-                            <td><%= prod.getCod_prod()%></td>
-                            <td><%= prod.getNom_cat()%></td>
-                            <td><%= prod.getNombre()%></td>
-                            <td><%= prod.getDescripcion()%></td>
-                            <td><%= prod.getStock()%></td>
-                            <td><%= prod.getPrecio()%></td>
-                            <td>
-                                <a href="#" class="editar">Editar</a> | <a href="#" class="eliminar">Eliminar</a>
-                            </td>
-                        </tr>
-                        <%}%>
-                        <!-- Repite m?s filas seg?n sea necesario -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Opciones de acci?n -->
         </div>
     </body>
     <script>

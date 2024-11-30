@@ -1,51 +1,86 @@
+<%@page import="Modelo.Principal"%>
+<%@page import="java.util.*"%>
+<%@page import="ModeloDAO.PrincipalDAO"%>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuraci贸n</title>
-    <link rel="stylesheet" href="config.css">
-    <link rel="stylesheet" href="barra_lateral.css">
-    <link rel="stylesheet" href="panel_principal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Configuraci髇</title>
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="css/barra_lateral.css">
+    <link rel="stylesheet" href="css/panel_principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Barra lateral fija con el men煤 principal -->
     <div class="barra-lateral">
-        <h2>ORG脕NICO CAFETER脥A</h2>
-        <!-- Opciones del men煤 -->
-        <a href="index.html" class="opcion-menu">
-            <i class="fa fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="ventas.html" class="opcion-menu">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Venta</span>
-        </a>
-        <a href="inventario.html" class="opcion-menu">
-            <i class="fa fa-boxes"></i>
-            <span>Inventario</span>
-        </a>
-        <a href="#" class="opcion-menu">
-            <i class="fa fa-chart-bar"></i>
-            <span>Reportes</span>
-        </a>
-        <a href="config.html" class="opcion-menu">
-            <i class="fa fa-cogs"></i>
-            <span>Configuraci贸n</span>
-        </a>
-
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxs-coffee-alt"></i>
+                <span style="font-weight: 600;">Organico Cafeteria</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="Controlador?accion=listarpr">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="nav-item">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listar">
+                    <i class="bx bxs-store-alt"></i>
+                    <span class="nav-item">Ventas</span>
+                </a>
+                <span class="tooltip">Ventas</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listarinv">
+                    <i class="bx bx-basket"></i>
+                    <span class="nav-item">Inventario</span>
+                </a>
+                <span class="tooltip">Inventario</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listarrep">
+                    <i class="bx bxs-report"></i>
+                    <span class="nav-item">Reportes</span>
+                </a>
+                <span class="tooltip">Reportes</span>
+            </li>
+            <li>
+                <a href="Controlador?accion=listarusuario">
+                    <i class="bx bx-cog"></i>
+                    <span class="nav-item">Configuracion</span>
+                </a>
+                <span class="tooltip">Configuracion</span>
+            </li>
+        </ul>
         <!-- Botones de acciones ubicados al final -->
         <div class="acciones">
-            <form action="apertura-caja.html" method="get">
-                <button class="boton apertura-caja">Apertura y cierre de caja</button>
+            <form action="apertura-caja.jsp" method="get">
+                <button class="boton apertura-caja">
+                    <i class="bx bx-wallet"></i>
+                    <span class="boton-texto">Apertura y cierre de caja</span>
+                </button>
             </form>
-            <button class="boton salir"><i class="fa fa-sign-out-alt"></i>Salir</button>
+            <form action="Validar" method="POST">
+                <button type="submit" class="boton salir" name="accion" value="Salir">
+                    <i class="bx bx-log-out"></i>
+                    <span class="boton-texto">Salir</span>
+                </button>
+            </form>
+            
         </div>
     </div>
 
-    <div class="contenido-principal">
-            <h1>Configuraci贸n</h1>
+    <div class="main-content">
+            <h1>Configuraci髇</h1>
 
             <section class="mi-usuario">
                 <h2>Mi Usuario</h2>
@@ -56,21 +91,15 @@
                     <label>Apellidos</label>
                     <input type="text" value="Cris贸stomo Berrocal">
 
-                    <label>N煤mero de documento de identidad</label>
+                    <label>N鷐ero de documento de identidad</label>
                     <input type="text" value="71776762">
 
-                    <label>C贸digo de empleado</label>
+                    <label>C骴igo de empleado</label>
                     <input type="text" value="01">
 
-                    <label>Tel茅fono</label>
+                    <label>Tel閒ono</label>
                     <input type="text" value="934 401 034">
 
-                    <label>Editar permisos</label>
-                    <select>
-                        <option>Administrador</option>
-                        <option>Cajero</option>
-                        <option>Barista</option>
-                    </select>
                 </form>
             </section>
             <section class="usuarios">
@@ -146,4 +175,14 @@
             </section>
     </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.querySelector('#btn');
+        const sidebar = document.querySelector('.barra-lateral');
+
+        btn.onclick = function() {
+            sidebar.classList.toggle('active');
+        };
+    });
+</script>
 </html>

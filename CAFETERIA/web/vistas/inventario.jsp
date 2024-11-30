@@ -47,14 +47,14 @@
                 <span class="tooltip">Inventario</span>
             </li>
             <li>
-                <a href="reportes.jsp">
+                <a href="Controlador?accion=listarrep">
                     <i class="bx bxs-report"></i>
                     <span class="nav-item">Reportes</span>
                 </a>
                 <span class="tooltip">Reportes</span>
             </li>
             <li>
-                <a href="config.jsp">
+                <a href="Controlador?accion=listarusuario">
                     <i class="bx bx-cog"></i>
                     <span class="nav-item">Configuracion</span>
                 </a>
@@ -69,10 +69,13 @@
                     <span class="boton-texto">Apertura y cierre de caja</span>
                 </button>
             </form>
-            <button class="boton salir">
-                <i class="bx bx-log-out"></i>
-                <span class="boton-texto">Salir</span>
-            </button>
+            <form action="Validar" method="POST">
+                <button type="submit" class="boton salir" name="accion" value="Salir">
+                    <i class="bx bx-log-out"></i>
+                    <span class="boton-texto">Salir</span>
+                </button>
+            </form>
+            
         </div>
     </div>
     
@@ -149,8 +152,8 @@
 
         <!-- Opciones de acci?n -->
         <div class="acciones-inventario">
-            <form action="agregar-producto.jsp" method="get">
-                <button class="boton agregar-producto">Agregar Nuevo Producto</button>
+            <form action="Controlador?accion=agregarnueprod" method="GET">
+                <button class="boton agregar-producto" type="submit" name="accion" value="agregarnueprod"  class="boton editar-carta">Agregar Nuevo Producto</button>
             </form>
             <form action="agregar-cat.jsp" method="get">
                 <button class="boton agregar-categoria">Agregar Nueva Categor?a</button>
