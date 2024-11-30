@@ -68,7 +68,27 @@ public class ProductoDAO implements CRUD{
 
     @Override
     public List listarpr() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<Producto>list = new ArrayList<>();
+        String sql= "select * from producto";
+        try {
+            con = conexion.getConexion(); // Obtiene la conexión
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            while (rs.next()) {
+                
+                Producto prod = new Producto();
+                prod.setCod_prod(rs.getInt("Cod_Producto"));
+                prod.setNombre(rs.getString("nombre"));
+                prod.setPrecio(rs.getDouble("precio"));
+                list.add(prod);
+                
+                
+            }
+            
+        } catch (Exception e) {
+        }
+        return list;
     }
 
     @Override
@@ -84,5 +104,27 @@ public class ProductoDAO implements CRUD{
     @Override
     public boolean añadirproducto(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Producto> listarpr(int codCatePro) {
+        List<Producto> lista = new ArrayList<>();
+        String sql = "SELECT Cod_Producto, precio, nombre FROM producto WHERE Cod_catePro = ?";
+        try {
+            con = conexion.getConexion(); // Obtiene la conexión
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, codCatePro);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Producto p = new Producto();
+                p.setCod_prod(rs.getInt("Cod_Producto"));
+                p.setPrecio(rs.getDouble("precio"));
+                p.setNombre(rs.getString("nombre"));
+                lista.add(p);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
     }
 }

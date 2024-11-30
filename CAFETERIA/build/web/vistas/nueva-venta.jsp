@@ -91,14 +91,14 @@
                     <div class="categoria-display">
                         <h3>Categorias</h3>
                         <!-- Control buttons -->
-                        <div id="contenedor-btn" class="contenedor-btn">
-                            <button class="botonC" href="productoControlador?btnselec=all_p"> Todo</button>
-                            <button class="botonC" href="productoControlador?btnselec=cat&idc=1"> Bebidas Calientes</button>
-                            <button class="botonC" href="productoControlador?btnselec=cat&idc=2"> Postres</button>
-                            <button class="botonC" href="productoControlador?btnselec=cat&idc=4"> Bedidas Frías</button>
-                            <button class="botonC" href="productoControlador?btnselec=cat&idc=5"> Jugos</button>
-                            <button class="botonC" href="productoControlador?btnselec=cat&idc=6"> Sandwiches</button>
-                            <button class="botonC" href="productoControlador?btnselec=cat&idc=7"> Hamburguesas</button>
+                        <div id="contenedor-btn" class="grupo-c" action="C">
+                            <a href="<%= request.getContextPath()%>/Controlador?btnselec=8" class="btn" target="listarproductos">Mostrar todo</a>
+                            <a href="<%= request.getContextPath()%>Controlador?btnselec=1" class="btn" target="listarproductos">Bebidas Calientes</a>
+                            <a href="<%= request.getContextPath()%>Controlador?btnselec=2" class="btn" target="listarproductos">Postres</a>
+                            <a href="<%= request.getContextPath()%>Controlador?btnselec=4" class="btn" target="listarproductos">Bebidas Frías</a>
+                            <a href="<%= request.getContextPath()%>Controlador?btnselec=5" class="btn" target="listarproductos">Jugos</a>
+                            <a href="<%= request.getContextPath()%>Controlador?btnselec=6" class="btn" target="listarproductos">Sandwiches</a>
+                            <a href="<%= request.getContextPath()%>Controlador?btnselec=7" class="btn" target="listarproductos">Hamburguesas</a>
                         </div>
                     </div>                   
                     <div>
@@ -106,49 +106,13 @@
                             <div class="t_header">
                                 <div>
                                     <h3>Lista de Productos</h3>
-                                </div>
-                                <div class="barra-busqueda">
-                                    <form action="">
-                                        <i class="bx bx-search-alt"></i>
-                                        <input type="text" placeholder="Buscar productos...">
-                                    </form>
+                                    
+                                </div>                             
+                                <div >
+                                    <iframe name="listarproductos" style="height: 100%; width: 100%" ></iframe>
                                 </div>
                             </div>
                             <div class="tabla-body" id="tabla-productos">
-                                <%
-                                Connection con;
-                                String url = "jdbc:mysql://localhost:3306/cafeteria";
-                                String user = "root";
-                                String pass = "";
-                                Class.forName("com.mysql.jdbc.Driver");
-                                con = DriverManager.getConnection(url, user, pass);
-                                PreparedStatement ps;
-                                ResultSet rs;
-                                ps = con.prepareStatement("select * from producto");
-                                rs = ps.executeQuery();
-                            %>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 10px">ID</th>
-                                        <th>Producto</th>
-                                        <th>Precio</th>
-                                        <th style="width: 40px">Opciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <%
-                                        while (rs.next()) {
-                                    %>
-                                    <tr class="align-middle">
-                                        <td><%=rs.getInt("Cod_Producto")%></td>
-                                        <td><%=rs.getString("Nombre")%></td>
-                                        <td><%=rs.getFloat("Precio")%></td>
-                                        <td><a>Añadir</a></td>
-                                    </tr>
-                                    <%}%>
-                                </tbody>
-                            </table>
                             </div> <!-- /.card-body -->
                         </div>
                     </div>

@@ -60,10 +60,16 @@ public class Controlador extends HttpServlet {
 
         if (action == null) {
             acceso = listar; // Acción por defecto si no se proporciona ninguna
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         } else if (action.equalsIgnoreCase("listar")) {
             acceso = listar; // Acción para listar las ventas
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         }else if (action.equalsIgnoreCase("listarprod")){ 
             acceso = listarprod;
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         }else if (action.equalsIgnoreCase("listarpr")) {
             // Lógica para listar los productos principales
             List<Principal> listaProductos = prdao.listarpr(); // Obtener lista de productos más vendidos
@@ -78,6 +84,8 @@ public class Controlador extends HttpServlet {
             request.setAttribute("numVentasTotal", pr.getNumVentasTotal());
             
             acceso = listarpr; // Redirigir a principal.jsp con los datos
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         } else if (action.equalsIgnoreCase("listarinv")){
             // Lógica para listar los productos del inventario
             List<Inventario> listarinven = invdao.listarinv(); // Obtener lista de productos más vendidos
@@ -89,22 +97,77 @@ public class Controlador extends HttpServlet {
             request.setAttribute("stock_invent", inv.getStock_invent());
             
             acceso = listarinv; // Redirigir a inventario.jsp con los datos
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         } else if (action.equalsIgnoreCase("listarrep")) {
             List<Pedidos> listaPedidos = peddao.listped(); // Obtener lista de productos más vendidos
             request.setAttribute("totalPedidos", listaPedidos);
             acceso = listarrep;
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         } else if (action.equalsIgnoreCase("listarusuario")) {
             acceso = listarusuario;
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         } else if (action.equalsIgnoreCase("agregarnueprod")) {
             acceso = agregarnueprod;
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
         }
         
         else{
             acceso = listar; // Acción desconocida, redirigir a lista de ventas
+            RequestDispatcher vista = request.getRequestDispatcher(acceso);
+            vista.forward(request, response);
+        }
+        
+        //  CONTROLADOR DIRIGIDO A LA VISTA NUEVA-VENTA.JSP
+        //  MANEJA LAS VISTAS DE LOS PRODUCTOS EN LA VENTANA PARA QUE SE VISUALICEN EN TIEMPO REAL
+        String btnselec = request.getParameter("btnselec");
+        switch (btnselec) {
+            case "1" -> {
+                int codCatePro = 1;
+                List<Producto> lista = pdao.listarpr(codCatePro);
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request,response);   
+            }
+            case "2" -> {
+                int codCatePro = 2;
+                List<Producto> lista = pdao.listarpr(codCatePro);
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request, response);
+            }   
+            case "4" -> {
+                int codCatePro = 4;
+                List<Producto> lista = pdao.listarpr(codCatePro);
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request, response);
+            }   
+            case "5" -> {
+                int codCatePro = 5;
+                List<Producto> lista = pdao.listarpr(codCatePro);
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request, response);
+            }   
+            case "6" -> {
+                int codCatePro = 6;
+                List<Producto> lista = pdao.listarpr(codCatePro);
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request, response);
+            }
+            case "7" -> {
+                int codCatePro = 7;
+                List<Producto> lista = pdao.listarpr(codCatePro);
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request, response);
+            }
+            case "8" -> {
+                List<Producto> lista = pdao.listar();
+                request.setAttribute("productos", lista);
+                request.getRequestDispatcher("listar-productos.jsp").forward(request, response);
+            }
         }
 
-        RequestDispatcher vista = request.getRequestDispatcher(acceso);
-        vista.forward(request, response);
     }
 
     @Override
